@@ -9,13 +9,11 @@
 
 #include <ida.hpp>
 #include <idp.hpp>
-#include <enum.hpp>
 #include <frame.hpp> 
 #include <expr.hpp>
 #include <name.hpp>
 #include <segment.hpp>
 #include <bytes.hpp>
-#include <struct.hpp>
 #include <loader.hpp>
 #include <kernwin.hpp>
 #include <auto.hpp>
