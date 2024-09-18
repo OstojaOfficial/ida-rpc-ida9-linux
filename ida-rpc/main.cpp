@@ -135,7 +135,8 @@ namespace callbacks
 	}
 }
 
-static int idaapi hook_callbacks( ) {
+static plugmod_t*  hook_callbacks( )
+{
 
 	// IDP callback hook ///////////////////////////////////////////////////////////////////////////////////////////////
 	if ( !hook_to_notification_point( HT_IDP, ( hook_cb_t* )callbacks::idp_callback ) ) {
@@ -231,8 +232,8 @@ static void idaapi unhook_callbacks( ) {
 
 #pragma endregion 
 	
-static int idaapi IDAP_init( void ) {	
-
+static plugmod_t* IDAP_init( void )
+{	
 	addon_info_t addon;
 	addon.id       = "shigureJ.IDA.RPC";
 	addon.name     = "IDA RPC";
