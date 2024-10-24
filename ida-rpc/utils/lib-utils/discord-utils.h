@@ -84,12 +84,12 @@ namespace discord_utils
 			( g_options.timeelapsed_enabled ) ? rpc.startTimestamp = start_time : rpc.startTimestamp = NULL;
 
 			#ifdef _Release
-			rpc.largeImageKey = "ida-pro";
+			rpc.largeImageKey = "ida";
 			//rpc.smallImageKey = "ida-pro";
 			#endif
 
 			#ifdef _Release64
-			rpc.largeImageKey = "ida-pro64";
+			rpc.largeImageKey = "ida";
 			//rpc.smallImageKey = "ida-pro64";
 			#endif
 

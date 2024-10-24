@@ -13,7 +13,7 @@
 #endif
 
 int64_t     start_time;
-const char* app_id = "410737797914296320";
+const char* app_id = "1216680096501469254";
 
 const char* IDAP_comment = "IDA plugin by shigureJ";
 const char* IDAP_help    = "IDA plugin by shigureJ";
