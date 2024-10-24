@@ -60,7 +60,11 @@ namespace callbacks {
         switch ( notification_code ) {
         case idb_event::savebase:
         case idb_event::func_updated:
-        case idb_event::set_func_start: {
+        case idb_event::set_func_start:
+        case idb_event::renamed:
+        case idb_event::func_added:
+        case idb_event::deleting_func:
+        case idb_event::allsegs_moved: {
             int64_t current_time = get_current_time_ms( );
             if ( current_time - last_update_time >= update_interval ) {
                 discord_utils::update_discord_presence( start_time );
