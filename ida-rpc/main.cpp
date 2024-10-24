@@ -235,7 +235,7 @@ static plugmod_t* idaapi IDAP_init( void )
     addon.id       = "shigureJ.IDA.RPC";
     addon.name     = "IDA RPC";
     addon.producer = "shigureJ";
-    addon.url      = "https://www.github.com/offlineJ";
+    addon.url      = "https://www.github.com/apfelteesaft";
     addon.version  = AUTO_VERSION_STR;
     addon.freeform = "Copyright (c) 2018 shigureJ <https://keybase.io/shigurej>\n"
                      "All rights reserved.\n";
