@@ -1,12 +1,12 @@
 #pragma once
-#include "discord-rpc.h"
+#include "discord_rpc.h"
 #include <ida.hpp>
 #include <kernwin.hpp>
 
 namespace discord_utils
 {
-	static void handle_discord_ready( ) {
-
+	static void handle_discord_ready( const DiscordUser* connectedUser ) {
+		
 		if ( g_options.output_type >= ( int )output_type::errors_results_and_interim_steps && g_options.output_enabled ) {
 			msg( "Discord: ready\n" );
 		}
@@ -33,7 +33,7 @@ namespace discord_utils
 
 		handlers.ready		  = handle_discord_ready;
 		handlers.disconnected = handle_discord_disconnected;
-		handlers.errored	      = handle_discord_error;
+		handlers.errored	  = handle_discord_error;
 
 		Discord_Initialize( app_id, &handlers, 1, NULL );
 	}
@@ -88,11 +88,7 @@ namespace discord_utils
 			char version[ 32 ];
             get_kernel_version( version, sizeof( version ) );
 
-            if ( strcmp( version, "9.0" ) >= 0 ) {
-                rpc.largeImageKey = "ida";
-            } else {
-                rpc.largeImageKey = "ida"; // TODO replace with other version icons
-            }
+			rpc.largeImageKey = "ida";
 
 			Discord_UpdatePresence( &rpc );
 		}
